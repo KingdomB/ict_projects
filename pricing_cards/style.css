@@ -1,0 +1,235 @@
+:root {
+  --clr-primary: #27264b;
+  --clr-secondary1-light: #c3d2ff;
+  --clr-secondary1-dark: #B372FE;
+  --clr-secondary2-light: #facb70;
+  --clr-secondary2-dark: #f9b1c4;
+  --clr-neutral-100: #ffffff;
+  --clr-neutral-900: #f4f7fc;
+  --primary-font: 'Inter', sans-serif;
+  --secondary-font: 'Public Sans', sans-serif;
+  --font-size: 1.1vh;
+  --gradient-lite: linear-gradient(to right, #c3d2ff 25%, #B372FE);
+  --gradient-pro: linear-gradient(to left, #facb70 25%, #f9b1c4);
+  --shadow-one: 0px 17px 22px -15px #BDCCDE;
+  --shadow-two: 0px 17px 22px -15px #B372FE;
+  --shadow-three: 0px 17px 22px -15px #facb70;
+
+
+/* 
+$color-primary:
+$color-primary-dark:
+$color-primary-light: 
+And variations on each base like Mike Street says:
+
+$primary:
+$primaryLight: 
+$primaryDark:
+
+$secondary:
+$secondaryLight:
+$secondaryDark:
+
+$neutralDarker:
+$neutralDark:
+$neutral:
+$neutralLight:
+$neutralLighter: 
+$neutralLightest: 
+ */
+}
+
+html {
+  box-sizing: border-box;
+  font-size: var(--font-size);
+}
+
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  padding: 0; 
+  margin: 0;
+  font-family: var(--primary-font);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--clr-primary);
+}
+
+.container {
+  background-color: var(--clr-neutral-900);
+  border-radius: 12px;
+  padding: 5rem 5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2.5rem;
+  flex-basis: 0px;
+}
+
+section.card {
+  background-color: var(--clr-neutral-100);
+  padding: .6rem .6rem 4rem .6rem ;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius:5px;
+}
+
+section {
+  &.free-card {
+    box-shadow: var(--shadow-one);
+  }
+
+  &.lite-card {
+    box-shadow: var(--shadow-two);
+  }
+
+  &.pro-card {
+    box-shadow: var(--shadow-three);
+  }
+}
+
+h2.card-title {
+  font-size: 1.2rem;
+  text-align: center;
+  margin-bottom: 5rem;
+  padding: 1.2rem 9rem;
+  border-radius: 3px;
+}
+
+h2.free-card-title {
+  background-color: var(--clr-neutral-900);  
+}
+
+h2.lite-card-title {
+  background: var(--gradient-lite);  
+  color: var(--clr-neutral-100);  
+}
+
+h2.pro-card-title {
+  background: var(--gradient-pro);
+  color: var(--clr-neutral-100);  
+}
+
+strong.card-price {
+  line-height: .70;
+  font-size: 4rem;
+  position: relative;
+}
+
+strong.card-price {
+  &::before {
+    content: "$";
+    position: absolute;
+    top: -5%;
+    left: -.6em;
+    font-size: 1rem;
+  }
+}
+
+strong.lite-card-price {
+  &::before {
+    content: "$";
+    position: absolute;
+    top: -5%;
+    left: -.6em;
+    font-size: 1rem;
+  }
+
+  &::after {
+    content: "/mo";
+    position: absolute;
+    bottom: 0;
+    right: -1.3em;
+    font-size: 1.2rem;
+  }
+}
+
+strong.pro-card-price {
+  &::before {
+    content: "$";
+    position: absolute;
+    top: -5%;
+    left: -.6em;
+    font-size: 1rem;
+  }
+
+  &::after {
+    content: "/mo";
+    position: absolute;
+    bottom: 0;
+    right: -2em;
+    font-size: 1.2rem;
+  }
+}  
+
+p.card-price-description {
+  margin-top: 1.2rem;
+  margin-bottom: 2.2rem;
+
+}
+
+p.card-desctiption {
+  text-align: center;
+  margin-bottom: 3.8rem;
+  max-width: 70%;
+  font-size: 1.1rem;
+}
+
+button.card-button {
+  padding: 1.5rem 5.2rem;
+  margin-bottom: 2.8rem;
+  border-radius: 5px;
+  border-width: 1px;
+  border-color: var(--clr-primary);
+  background-color: var(--clr-neutral-100);
+}
+
+button.lite-card-button {
+  background-color: var(--clr-primary);
+  color: var(--clr-neutral-100);
+}
+
+div.card-included-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  padding-left: 0;  
+  gap: 2rem;
+  /* BELOW WILL ALIGN CHILDe TO LEFT TO 
+  MATCH CHALLENGE EXAMPLE
+  BUT i WANT THEM CENTERED
+  min-width: 92%; 
+  text-align: left; */
+}
+
+p.card-text {
+  display: inline-block;
+  white-space: nowrap;
+}
+
+span.card-inclusions {
+  vertical-align: middle;
+  margin-left: .2rem;
+}
+
+i.fa-solid {
+  font-size: 1.2rem;
+  vertical-align: middle;
+}
+
+HIDDEN CARD
+
+section.hidden-card {
+  display: none;
+}
+

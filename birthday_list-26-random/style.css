@@ -1,0 +1,120 @@
+:root {
+  --body-background: #f089b1;
+  --card-background: white;
+  --light-font-color: grey;
+  --btn-color-dark: #e261cb;
+  --btn-color-mid: #f26bba;
+  --btn-color-light: #fe69a3;
+  --font-size: 1.3vh;
+  --gradient: linear-gradient(to right, var(--btn-color-dark), var(--btn-color-mid), var(--btn-color-light));
+  /* alternately use the following labels for color vars */
+  /* --clr-primary
+  --clr-secondary
+  --clr-neutral-100:[WHITE]
+  --clr-neutral-900:[DARKEST COLOR] */
+}
+
+html {
+  box-sizing: border-box;
+  font-size: var(--font-size);
+}
+
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  padding: 0;
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--body-background);
+}
+
+h2 {
+  font-weight: 500;
+}
+
+.section-one {
+  width: 280px;
+  min-width: 280px;
+  background-color: var(--card-background);
+  border-radius: 10px;
+  /* removed margin-left from section.section-one>* and added both padding below */
+  padding-left: 30px;
+  padding-right: 30px;
+  box-shadow: 50px 50px 37px -6px rgba(224,110,155,0.78);
+}
+
+section.section-one>* {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  row-gap: 1.4rem;
+}
+
+.section-one header {
+  padding-top: 2.5rem;
+  padding-bottom: 2.5rem;
+}
+
+.list>* {
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+}
+
+.record-text {
+  display: flex;
+  flex-direction: column;
+}
+
+span.list-record-age {
+  color: grey;
+  font-size: .8rem;
+  letter-spacing: .02rem;
+}
+
+img {
+  max-width: 38px;
+}
+
+button.list-record-button {
+  width: 100%;
+  margin: 2.5rem auto;
+  padding: 1.4rem;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  background: var(--gradient);
+  box-shadow: 0px 11px 7px -6px rgba(191,101,126,0.31);
+
+}
+
+.grow:hover {
+  -moz-transform: scale(1.05);
+  -webkit-transform: scale(1.05);
+  -o-transform: scale(1.05);
+  -ms-transform: scale(1.05);
+  transform: scale(1.05);
+}
+
+/* HIDDEN SECTION */
+li.list-record-full {
+  display: none;
+}
+
+button.button-close {
+  display: none;
+}
+
