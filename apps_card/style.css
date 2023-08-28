@@ -1,0 +1,167 @@
+:root {
+  --clr-primary: linear-gradient(
+ 122deg,
+  hsl(258deg 32% 56%) 0%,
+  hsl(257deg 30% 55%) 8%,
+  hsl(254deg 28% 54%) 17%,
+  hsl(252deg 27% 52%) 25%,
+  hsl(251deg 26% 52%) 34%,
+  hsl(250deg 26% 52%) 42%,
+  hsl(249deg 25% 51%) 51%,
+  hsl(245deg 25% 49%) 59%,
+  hsl(240deg 25% 47%) 68%,
+  hsl(236deg 26% 45%) 76%,
+  hsl(232deg 29% 42%) 84%,
+  hsl(229deg 32% 39%) 92%,
+  hsl(225deg 34% 36%) 100%
+  );
+  --clr-secondary1-light: rgb(233, 233, 233);
+  --clr-secondary1-dark:  #000000;
+  --clr-secondary2-light: rgb(143, 143, 143);
+  --clr-secondary2-dark:  #363636;
+  --clr-secondary3-light: #DCE3FF;
+  --clr-secondary3-dark:  #7CD424;
+  --clr-neutral-100: #ffffff;
+  --clr-neutral-900: #6680FF;
+  --primary-font: 'Josefin Sans', sans-serif;
+  --secondary-font: 'Open Sans', sans-serif;
+  --font-size: calc(1vh + .2vw);
+}
+
+html {
+  box-sizing: border-box;
+  font-size: var(--font-size);
+}
+
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: var(--clr-primary);
+}
+
+.app-card-container {
+  padding: 3rem 2.5rem;
+  background: var(--clr-neutral-100);
+  border-radius: 5px;
+}
+
+/* hr {
+  border: 1px solid var(--clr-secondary1-light);
+  margin: 1.5rem 0!important;
+} */
+
+.app-card-header {
+  font-size: 2.3rem;
+  color: var(--clr-secondary2-dark);
+  font-weight: 700;
+}
+
+.app-card-list {
+  border-top: .2rem solid var(--clr-secondary1-light);
+  border-bottom: .2rem solid var(--clr-secondary1-light);
+  list-style: none;
+  display: grid;
+  grid-template-rows: 12rem 12rem;
+  /* grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); IRRELEVANT EXAMPLE*/
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 2rem;
+  padding: 2rem 0 3rem 0;
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.app-card-li-item {
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+
+  &:hover {
+    transform: scale(1.3);
+    transition: transform .4s ease-in-out;
+    cursor: pointer;
+    box-shadow: 0px 0px 11px 4px var(--clr-secondary3-light);
+    border-radius: 5px;
+  }
+}
+
+
+.app-card-li-image {
+  max-width: 4.8rem;
+}
+
+.app-card-li-label {
+  font: var(--primary-font);
+  font-size: 1.2rem;
+  color: var(--clr-secondary2-light);
+}
+
+.app-card-button {
+  width: 100%;
+  padding: 2rem;
+  border: none;
+  border-radius: 5px;
+  color: var(--clr-neutral-100);
+  background-color: var(--clr-neutral-900);
+  font-size: 1.3rem;
+}
+
+.app-card-add-button {
+  padding: .5rem 1.7rem;
+  border: none;
+  border-radius: 5px;
+  font-size: 1.3rem;
+  font-weight: 200;
+  color: var(--clr-neutral-100);
+  background-color: var(--clr-secondary3-dark);
+}
+
+.app-card-add-button span {
+  margin-right: .2rem;
+  font-size: 1.8rem;
+}
+
+.hidden {
+  display: none;
+}
+
+/*scale is causing container distortion
+scale transform cancel for children not working
+*/
+.app-card-li-item:hover {
+  .hidden {
+    display: flow-root
+  }
+
+  .app-card-li-label {
+    display: none;
+  }
+
+  .app-card-container {
+    transform: scale(1/1.5);
+  }
+
+  .app-card-li-image {
+    transform: scale(1/1.5);
+  }
+
+  .app-card-add-button {
+  transform: scale(1/1.5)
+  }
+
+  .app-card-add-button span {
+  transform: scale(1/1.5);
+  }
+} 

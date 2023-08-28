@@ -1,0 +1,30 @@
+(edited)
+
+Florin Pop — Yesterday at 8:45 PM
+Add margin bottom to the label with a display block. Or margin top to the input
+[8:46 PM]
+Or you could transform their parent (the div) into a flex container and set the gap prop
+[8:46 PM]
+You don’t need to set the height
+[8:46 PM]
+Very very rarely you should set the height property
+
+@Florin Pop
+Or you could transform their parent (the div) into a flex container and set the gap prop
+
+Fourth_quarter — Yesterday at 10:04 PM
+Hey Florin. I’ll give that a try, ty!
+NEW
+
+Florin Pop — Yesterday at 10:04 PM
+anytime!
+August 18, 2023
+
+@Fourth_quarter
+Well the best solution that I have been able to find is to add line breaks in-between the label and input like below. If anyone has any css fixes please let me know. Ty. <div>   <label for="emial2" class="email2-label">Confirm Email</label>       <br>       <br>   <input type="email" class="email2-input" id="fname" placeholder="Confirm Email Address" required> </div> (edited)
+
+Mihai Andrei — Today at 2:41 AM
+For this usecase, i usually add: display: grid, and gap: 8px on the div wrapper
+
+Message #pro-platinum
+

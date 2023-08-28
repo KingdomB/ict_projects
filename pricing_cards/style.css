@@ -63,6 +63,11 @@ body {
   background-color: var(--clr-primary);
 }
 
+main {
+  display: flex;
+  flex-basis: 0;
+}
+
 .container {
   background-color: var(--clr-neutral-900);
   border-radius: 12px;
@@ -74,7 +79,7 @@ body {
   flex-basis: 0px;
 }
 
-section.card {
+div.card {
   background-color: var(--clr-neutral-100);
   padding: .6rem .6rem 4rem .6rem ;
   display: flex;
@@ -84,7 +89,7 @@ section.card {
   border-radius:5px;
 }
 
-section {
+div {
   &.free-card {
     box-shadow: var(--shadow-one);
   }
@@ -227,9 +232,36 @@ i.fa-solid {
   vertical-align: middle;
 }
 
-HIDDEN CARD
-
-section.hidden-card {
+/* HIDDEN CARD */
+.hide {
   display: none;
 }
+
+/* REGISTRATION FORM */
+.reg-form-container {
+  padding: 4rem 15rem;
+}
+
+div.registration-form {
+  min-width: 1rem;
+}
+
+.registration-form form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.registration-form-title {
+  width: 100%;
+}
+
+.registration-form form>button {
+  padding: .5rem 1.5rem;
+
+}
+
+
 
