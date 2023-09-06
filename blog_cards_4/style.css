@@ -1,0 +1,130 @@
+:root {
+    --clr-primary: #EEEFFC; 
+    --clr-secondary-light: #cecece;
+    --clr-secondary-dark: #6d6d6d;
+    --clr-secondary1-dark: #F85E8A;
+    --clr-neutral-100: #ffffff;
+    --clr-neutral-900: #2d356b;
+    --primary-font: 'Quicksand', sans-serif;
+    --font-size: calc(1vh + .2vw);
+    --shadow: 0px 0px 6px 0px #9E9E9E;
+}
+
+html {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-size: var(--font-size);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  height: 100vh;
+  max-width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10rem 20rem;
+
+}
+
+.card-container {
+  display: grid;
+  grid-auto-columns: repeat(auto-fill, 1fr);
+  grid-auto-flow: column;
+  grid-gap: 3rem;
+}
+
+.card-body {
+  display: flex;
+  flex-direction: column;
+  border-radius: 8px;
+  position: relative;
+  box-shadow: var(--shadow);
+  min-width: 25rem;
+}
+
+.card-body:first-child::before {
+  content: "NEW";
+  position: absolute;
+  padding: .2rem .5rem;
+  background-color: var(--clr-secondary1-dark);
+  top: 1rem;
+  left: 1rem;
+  border-radius: 5px;
+  font-size: 1.2rem;
+  color: var(--clr-neutral-100);
+}
+
+.card-image {
+  width: 100%;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+}
+
+.card-section-2 {
+  display: flex;
+  flex-direction: column;
+  padding: 2.5rem 2rem 2rem 2rem;
+  flex: 1;
+}
+
+.card-title {
+  font-family: var(--primary-font);
+  margin-bottom: 3rem;
+  font-size: 2.5rem;
+  font-weight: 400;
+  color: var(--clr-neutral-900);
+}
+
+.card-text {
+  margin-bottom: 3rem;
+  line-height: 2rem;
+  font-family: var(--primary-font);
+  font-weight: 300;
+  color: var(--clr-neutral-900);
+}
+
+
+.card-author-section {
+  display: flex;
+  align-items: center;
+  position: relative;
+  border-top: 1px solid lightgray;
+  padding-top: 2rem;
+  margin-top: auto;
+}
+
+.author-image {
+  width: 4rem;
+  border-radius: 100%;
+  margin-right: 1.2rem;
+}
+
+.author-name-plus-title {
+  line-height: 1.2rem;
+}
+
+.author-post-date {
+  position: absolute;
+  right: 0;
+  color: var(--clr-secondary-dark);
+}
+
+.author-name {
+  font-size: 1rem;
+  color: var(--clr-neutral-900);
+}
+
+.author-title {
+  font-size: .8rem;
+  color: var(--clr-secondary-light);
+}
+
